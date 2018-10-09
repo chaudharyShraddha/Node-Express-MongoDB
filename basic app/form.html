@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome TO Survey Form</title>
+    <style>
+	*{
+  margin: 0;
+  padding:0;
+}
+body{
+  background-image: url("https://image.ibb.co/cVaGvy/hello1.jpg");
+  background-repeat: no-repeat;
+  height: 900px;
+  background-size:cover;
+  color:#4E0928;
+  font-family: Oswald;
+}
+.content{
+  display: block;
+  width: 700px;
+  height: 850px;
+  background: #eee;
+  opacity: .7;
+  margin-left: 170px;
+}
+h1{
+text-align: center;
+color:#5A0228;
+margin-top: 50px;
+padding-top: 30px;
+}
+.line{
+  margin-left:160px;
+  max-width:400px;
+  margin-top:15px;
+  border-top: 5px solid #ED5094;
+}
+#description{
+  margin-left:25px;
+  font-size: 1.5em;
+  padding-top: 25px;
+  margin-bottom: 40px;
+}
+#form-item{
+  font-size: 1.5em;
+  margin-left: 90px;
+  padding-top: 8px;
+}
+#form-item input{
+  margin-left: 70px;
+  border:0;
+  border-radius:0;
+  font-size:1.02em;
+  background:0 0;
+  border-bottom:2px solid black;
+  min-width: 250px;
+}
+#form-item input:focus, #form-item textarea:focus{
+      outline:0;
+    }
+#form-item>#number-label{margin-left: 88px;min-width: 294px;}
+  #form-item>#bdate{margin-left: 35px;min-width: 294px;}
+
+#form-item1{
+  font-size: 1.5em;
+  margin-left: 90px;
+  padding-top: 8px;
+}
+.dropdown{
+  margin-left: 70px;
+  border:0;
+  border-radius:0;
+  font-size:1.02em;
+  background:0 0;
+  border-bottom:2px solid black;
+  min-width: 370px;
+  padding-top: 20px;
+}
+.dropdown:focus{outline: 0;}
+
+#form-item1>#gender{
+  margin-left: 20px;
+  margin-right: 10px;
+}
+#form-item1>#hobbies{
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.input-field{
+  margin-left: 30px;
+  border:0;
+  border-radius:0;
+  font-size:1.02em;
+  font-size: center;
+  background:0 0;
+  border-bottom:2px solid black;
+  min-width: 320px;
+  padding-top: 20px;
+}
+.input-field:focus{outline:0;}
+#submit{
+    margin: 20px 0 80px 280px;
+    padding: 10px 30px;
+    font-size: 14px;
+    border:none;
+    font-size:20px;
+    line-height:20px;
+    text-align:center;
+    color: white;
+    background-color: #A43264;
+}
+#submit:hover{
+	  cursor:pointer;
+    color:black;
+    background:#FCCFE2;
+	  outline:0;
+  }
+
+	</style>
+  </head>
+  <body>
+    <div class="content">
+    <h1 id="title">SURVEY FORM</h1><hr class="line">
+    <p id="description"><img src="https://image.ibb.co/gmxeFy/img.png">  Hello! Let's know something about You..</p>
+
+    <form id="survey-form" action="http://127.0.0.1:8888/get">
+
+      <div id="form-item">
+        <label for="name" id="name">*NAME:</label>
+        <input type="text" name="name" id="name-label" placeholder="Enter your Name..." required>
+      </div>
+<br>
+      <div id="form-item">
+        <label for="email" id="email">*E-mail:</label>
+        <input type="email" name="email" id="email-label" placeholder="Enter your E-mail Id.." required>
+      </div>
+<br>
+      <div id="form-item">
+        <label for="age" id="number">AGE:</label>
+        <input type="number" name="age" id="number-label" min="1" max="100" placeholder="Enter your Age...">
+      </div>
+<br>
+      <div id="form-item">
+        <label for="bdate" id="bdat">Birth-date:</label>
+        <input type="date" id="bdate" name="b_date">
+      </div>
+<br>
+      <div id="form-item1">
+        <label for="text" id="dropdown">Which option best describes your
+           current role?</label><br>
+        <select class="dropdown" name="job">
+          <option disabled selected name="job">Select Option</option>
+            <option value="student" name="job">Student</option>
+            <option value="job" name="job">Full time job</option>
+            <option value="learner" name="job">Full Time Learner</option>
+            <option value="preferNo" name="job">Prefer not to say</option>
+            <option value="other" name="job">Other</option>
+        </select>
+      </div>
+<br>
+      <div id="form-item1">
+        <label>GENDER:</label>
+          <input type="radio" id="gender" value="male" name="gender">Male
+          <input type="radio" id="gender" value="female" name="gender">female
+          <input type="radio" id="gender" value="other" name="gender">Other
+      </div>
+<br>
+      <div id="form-item1">
+        <label for="hobbies">HOBBIES:</label>
+          <input type="checkbox" id="hobbies" value="Drawing" name="hobbie">Drawing
+          <input type="checkbox" id="hobbies" value="programming" name="hobbie">Programming
+          <input type="checkbox" id="hobbies" name="hobbie" value="singing" name="hobbie">Singing
+          <input type="checkbox" id="hobbies"  name="hobbie" value="dancing" style="margin-left:150px;">Dancing
+          <input type="checkbox" id="hobbies" name="hobbie" value="reading" style="margin-left:30px;">Reading
+          <input type="checkbox" id="hobbies" name="hobbie" value="other" style="margin-left:80px;">Other
+      </div>
+<br>
+      <div id="form-item1">
+      <label for="comment">Discription:</label>
+        <textarea id="comments" class="input-field" name="coment" placeholder="Discribe something about your self.."></textarea>
+    </div>
+<br>
+         <button id="submit" type="submit">Submit</button></div>
+    </form>
+
+  </body>
+</html>
